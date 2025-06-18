@@ -22,16 +22,17 @@ const App = () => {
       {false && <HotelReg />}
       <div className='min-h-[70vh]'>
         <Routes>
-
           <Route path="/" element={<Home />} />
           <Route path="/rooms" element={<AllRooms />} />
           <Route path="/rooms/:id" element={<RoomDetails />}/>
           <Route path="/my-Bookings" element={<MyBookings />}/>
-          <Route path="/owner" element={<Layout />}>
+          
+          <Route path="/owner" element={<Layout />}> 
             <Route index                   element={<Dashboard />}/>
             <Route path="/owner/add-Room"  element={<AddRoom />}/>
             <Route path="/owner/list-Room" element={<ListRoom />}/>
           </Route>
+
         </Routes>
       </div>
       <Footer />
